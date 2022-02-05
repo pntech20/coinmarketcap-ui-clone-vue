@@ -5,12 +5,17 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
+    "test:e2e": "vue-cli-service test:e2e",
+    "json:server": "json-server --watch json-server/db.json --port 3000",
     "lint": "vue-cli-service lint",
     "format": "prettier .  --write",
     "i18n:report": "vue-cli-service i18n:report --src \"./src/**/*.?(js|vue)\" --locales \"./src/locales/**/*.json\""
   },
   "dependencies": {
+    "@vue/cli-plugin-e2e-cypress": "^4.5.15",
     "core-js": "^3.6.5",
+    "cypress": "^9.4.1",
+    "json-server": "^0.17.0",
     "vue": "^3.0.0",
     "vue-i18n": "^9.1.0",
     "vue-router": "^4.0.0-0",

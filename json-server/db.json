@@ -1,0 +1,36 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "tsn361@gmail.com",
+            "age": 32,
+            "companyId": 1
+        },
+        {
+            "id": 2,
+            "name": "karen ",
+            "username": "karen",
+            "email": "karen@gmail.com",
+            "age": 32,
+            "companyId": 1
+        },
+        {
+            "id": 3,
+            "name": "jackson",
+            "username": "jackson",
+            "email": "jackson@gmail.com",
+            "age": 32,
+            "companyId": 1
+        }
+    ],
+    "companies": [
+        {
+            "id": 1,
+            "name": "company1",
+            "address": "address1",
+            "phone": "phone1"
+        }
+    ]
+}
