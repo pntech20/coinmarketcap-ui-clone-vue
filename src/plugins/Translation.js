@@ -58,14 +58,14 @@ const Trans = {
    * @param lang
    * @return {Promise<any>}
    */
-  changeLanguage (lang) {
-    if (!Trans.isLangSupported(lang)) return Promise.reject(new Error('Language not supported'))
-    if (i18n.locale === lang) return Promise.resolve(lang) // has been loaded prior
-    return Trans.loadLanguageFile(lang).then(msgs => {
-      i18n.setLocaleMessage(lang, msgs.default || msgs)
-      return Trans.setI18nLanguageInServices(lang)
-    })
-  },
+  // changeLanguage (lang) {
+  //   if (!Trans.isLangSupported(lang)) return Promise.reject(new Error('Language not supported'))
+  //   if (i18n.locale === lang) return Promise.resolve(lang) // has been loaded prior
+  //   return Trans.loadLanguageFile(lang).then(msgs => {
+  //     i18n.setLocaleMessage(lang, msgs.default || msgs)
+  //     return Trans.setI18nLanguageInServices(lang)
+  //   })
+  // },
   /**
    * Async loads a translation file
    * @param lang
@@ -89,12 +89,12 @@ const Trans = {
    * @param {Function} next
    * @return {*}
    */
-  routeMiddleware (to, from, next) {
-    // Load async message files here
-    const lang = to.params.lang
-    if (!Trans.isLangSupported(lang)) return next(Trans.getUserSupportedLang())
-    return Trans.changeLanguage(lang).then(() => next())
-  },
+  // routeMiddleware (to, from, next) {
+  //   // Load async message files here
+  //   const lang = to.params.lang
+  //   if (!Trans.isLangSupported(lang)) return next(Trans.getUserSupportedLang())
+  //   return Trans.changeLanguage(lang).then(() => next())
+  // },
   /**
    * Returns a new route object that has the current language already defined
    * To be used on pages and components, outside of the main \ route, like on Headers and Footers.

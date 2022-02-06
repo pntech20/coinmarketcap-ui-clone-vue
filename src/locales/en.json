@@ -1,3 +1,5 @@
 {
-  "message": "hello i18n !!"
+  "about":{
+    "title": "hello i18n !!"
+  }
 }

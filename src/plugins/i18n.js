@@ -1,6 +1,5 @@
 import { createI18n } from "vue-i18n";
-
-//import { DEFAULT_LANGUAGE, FALLBACK_LANGUAGE } from '@/constants/trans'
+import { DEFAULT_LANGUAGE, FALLBACK_LANGUAGE } from '@/constants/trans'
 import en from '@/locales/en.json'
 
 const numberFormats = {
@@ -96,17 +95,29 @@ const numberFormats = {
   },
 }
 
-export default createI18n({
-  legacy: false,
-  locale: process.env.VUE_APP_I18N_LOCALE || "en",
-  fallbackLocale: process.env.VUE_APP_I18N_FALLBACK_LOCALE || "en",
-  messages: { en },
+// function loadLocaleMessages() {
+//   const locales = require.context(
+//     "./locales",
+//     true,
+//     /[A-Za-z0-9-_,\s]+\.json$/i
+//   );
+//   const messages = {};
+//   locales.keys().forEach((key) => {
+//     const matched = key.match(/([A-Za-z0-9-_]+)\./i);
+//     if (matched && matched.length > 1) {
+//       const locale = matched[1];
+//       messages[locale] = locales(key).default;
+//     }
+//   });
+//   return messages;
+// }
+
+const i18n = new createI18n({
+  locale: DEFAULT_LANGUAGE, // set locale
+  fallbackLocale: FALLBACK_LANGUAGE,
+  globalInjection: true,
+  messages: {en},
   numberFormats
 });
 
-// export default createI18n({
-//   locale: DEFAULT_LANGUAGE, // set locale
-//   fallbackLocale: FALLBACK_LANGUAGE,
-//   messages: { en },// set locale messages
-//   numberFormats
-// })
+export default i18n;
