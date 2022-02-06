@@ -7,7 +7,6 @@
 <script>
 import Header from "@/components/global/header/index.vue";
 import Footer from "@/components/global/Footer.vue";
-import './styles/app.css';
 
 export default {
   name: "App",
