@@ -32,5 +32,35 @@
             "address": "address1",
             "phone": "phone1"
         }
+    ],
+    "home-short-stats": [
+        {
+            "id": 1,
+            "name": "crypto_count",
+            "value": "17399"
+        },
+        {
+            "id": 2,
+            "name": "exchange_count",
+            "value": "547"
+        },
+        {
+            "id": 3,
+            "name": "market_cap",
+            "value": "$2,890,000,000"
+        },
+        {
+            "id": 4,
+            "name": "24h_volume",
+            "value": "$96,000,000"
+        },
+        {
+            "id": 5,
+            "name": "dominance",
+            "data": [
+                {"BTC": "41.4%"},
+                {"ETH": "18.7%"}
+            ]
+        }
     ]
 }

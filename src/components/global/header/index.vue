@@ -1,10 +1,12 @@
 <template>
-  <div>
-    <header>
+  <header>
+    <div class="border-b">
       <TopNav></TopNav>
+    </div>
+    <div class="border-b py-4">
       <MainNav></MainNav>
-    </header>
-  </div>
+    </div>
+  </header>
 </template>
 
 <script>
