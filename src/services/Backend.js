@@ -11,12 +11,12 @@ export default {
         return axios.post("/api/signout");
     },
     me() {
-        return axios.get("/api/me");
+        return axios.get("/users");
+    },
+    getUsers(){
+        return axios.get("/users");
     },
 
-    //home
-    getAllHome() {
-    },
 
     //File upload
     upload_home_document(home_id, name, file) {

@@ -16,6 +16,18 @@ export default {
       //
     };
   },
+  mounted() {
+    this.getUsers();
+  },
+  methods: {
+    getUsers(){
+      
+      this.$Backend.getUsers().then(res => {
+        console.log("get_users");
+        console.log(JSON.stringify(res));
+      });
+    }
+  }
 
 };
 </script>

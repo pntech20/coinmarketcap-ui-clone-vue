@@ -12,6 +12,8 @@ const axiosInstance = axios.create({
 });
 
 
+axios.defaults.baseURL = "http://localhost:3000"//process.env.VUE_APP_API_URL;
+
 axiosInstance.interceptors.request.use(function (config) {
     //TODO enable this before start using  this service
     //config.headers['Authorization'] = 'Bearer ' + $store.getters['GET_JWT']
@@ -36,4 +38,4 @@ axiosInstance.interceptors.response.use(response => response, error => {
 
 });
 
-export default axiosInstance
+export default axios
